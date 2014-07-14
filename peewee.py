@@ -1876,7 +1876,7 @@ class MySQLDatabase(Database):
 
     def _connect(self, database, **kwargs):
         if not mysql:
-            raise ImproperlyConfigured('MySQLdb must be installed on the system')
+            raise ImproperlyConfigured('MySQLdb or PyMySQL must be installed on the system')
         conn_kwargs = {
             'charset': 'utf8',
             'use_unicode': True,
